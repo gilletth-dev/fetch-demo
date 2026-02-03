@@ -1,0 +1,22 @@
+FONCTION EXEMPLE
+function calc(a, b) {
+    // 2 variables a et b
+};
+
+calc(5, 6);
+
+function changeBckGround(color) {
+    document.querySelector('body').style.backgroundColor = color;
+};
+
+changeBckGround('green');
+
+
+EXEMPLE RETURN
+function calc(a, b) {
+    const result = a * b;
+    return result; 
+}
+
+const resultat = calc(5, 2);
+console.log(resultat);
