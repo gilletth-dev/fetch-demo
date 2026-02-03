@@ -20,3 +20,22 @@ function calc(a, b) {
 
 const resultat = calc(5, 2);
 console.log(resultat);
+
+EXEMPLE FETCH 
+// const promise = fetch('assets/data/file.txt');
+// promise.then(function(){
+
+// });
+// ci dessus vaut la même chose que ci bas 
+
+fetch('assets/data/file.txt')
+    .then(function(response) {
+        // extrait le texte de la réponse 
+        return response.text();
+    })
+    .then(function(text) {
+        console.log(text);
+    })
+    .catch(function() {
+        console.log('ERREUR')
+    });

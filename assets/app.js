@@ -1,13 +1,19 @@
-// const promise = fetch('assets/data/file.txt');
-// promise.then(function(){
+const btn = document.querySelector('a');
+const textAdd = document.querySelector('div');
+btn.addEventListener('click', textAppear); 
 
-// });
-// ci dessus vaut la même chose que ci bas 
-
-fetch('assets/data/file.txt')
+function textAppear(e){
+    e.preventDefault()
+    fetch(e.currentTarget.getAttribute('href'))
     .then(function(response) {
         // extrait le texte de la réponse 
         return response.text();
+    })
+    .then(function(text) {
+        textAdd.innerText = (text);
+    })
+    .catch(function() {
+        console.log('ERREUR')
     });
-
+}
 
