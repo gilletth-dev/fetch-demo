@@ -1,0 +1,26 @@
+[
+    {
+        "code": "PRJG0001-1",
+        "nom": "Projet",
+        "quadri": "Q1",
+        "credits": 7
+    },
+    {
+        "code": "DPPI0002-1",
+        "nom": "Développement des pratiques - Projet iLab",
+        "quadri": "Q1",
+        "credits": 7
+    },
+    {
+        "code": "TRPG0001-5",
+        "nom": "Travaux pratiques de techniques infographiques",
+        "quadri": "Q2",
+        "credits": 5
+    },
+    {
+        "code": "PIAG0001-1",
+        "nom": "Projet de techniques infographiques approfondies",
+        "quadri": "Q1",
+        "credits": 5
+    }
+]

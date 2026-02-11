@@ -39,3 +39,152 @@ fetch('assets/data/file.txt')
     .catch(function() {
         console.log('ERREUR')
     });
+
+
+EXEMPLE FETCH JSON
+EXO 1
+<button href="assets/data/heaj.json">clic</button>
+
+    <!-- <select class="fileSelector">
+        <option value="description1.txt">Description 1</option>
+        <option value="description2.txt">Description 2</option>
+        <option value="description3.txt">Description 3</option>
+    </select> -->
+    
+    <h1 class="title"></h1>
+    <p class="sections"></p>
+    <address class="address"></address>
+
+
+const btn = document.querySelector('button');
+const title = document.querySelector('.title');
+const sections = document.querySelector('.sections');
+const address = document.querySelector('.address');
+btn.addEventListener('click', textAppear); 
+
+function textAppear(e){
+    e.preventDefault()
+    fetch(e.currentTarget.getAttribute('href'))
+    .then(function(response) {
+        // extrait le texte de la réponse 
+        return response.json();
+    })
+    .then(function(data) {
+        title.innerText = (data.name);
+        sections.innerText = (data.sections[0]);
+        address.innerText = data.address.street + '\n' + data.address.zip + '\n' + data.address.city;
+    })
+    .catch(function() {
+        title.innerText = "erreur réseau";
+        console.log('ERREUR')
+    });
+}
+
+EXEMPLE LIST ET OBJET
+
+                0       1       2       3
+const list = ['John', 'Manu', 'Truc', 'BIDULE'];
+
+list.forEach(function(item, index){});
+
+cont obj = {
+    couleur: 'rouge',
+    nombre: 16
+};
+
+console.log(obj) => affiche couleur et nombre
+console.log(obj.couleur) => rouge
+
+EXO TAB N OBJET
+ <h1 class="title"></h1>
+    <p class="sections"></p>
+    <address class="address"></address>
+
+    <h1>Exercices JS</h1>
+    <section class="ex1">
+      <h2>Exercice 1</h2>
+      <p></p>
+    </section>
+
+    <section class="ex2">
+      <h2>Exercice 2</h2>
+      <p></p>
+    </section>
+
+    <section class="ex3">
+      <h2>Exercice 3</h2>
+      <p></p>
+    </section>
+    
+    <section class="ex4">
+      <h2>Exercice 4</h2>
+      <p></p>
+    </section>
+    
+    <section class="ex5">
+      <h2>Exercice 5</h2>
+      <p></p>
+    </section>
+
+    
+// EXO 1
+const fruits = ["apple", "banana", "cherry", "pear"];
+const ex1 = document.querySelector('.ex1 p');
+
+fruits.forEach(function(fruit, index) {
+  const line = `Fruit n°${index + 1} : ${fruit}\n`;
+  
+  ex1.innerText += line;
+});
+
+// EXO 2
+const prices = [12,5,8,20];
+const ex2 = document.querySelector('.ex2 p');
+
+let somme = 0;
+
+prices.forEach(function(price) {
+    somme += price;
+})
+
+ex2.innerText = somme;
+
+// EXO 3
+const ages = [12,18,25,15,30];
+const ex3 = document.querySelector('.ex3 p');
+
+let nbMajeurs = 0; 
+
+ages.forEach(function(age) {
+  if (age >= 18) {
+    nbMajeurs++; 
+    
+    const line = `Âge majeur trouvé : ${age} ans\n`;
+    ex3.innerText += line;
+  }
+});
+ex3.innerText += `\nTotal de personnes majeures : ${nbMajeurs}`;
+
+// EXO 4
+const students = [
+  {name:"Alice",score:15 },
+  {name:"Bob",score:9 },
+  {name:"Charlie",score:18 }
+];
+const ex4 = document.querySelector('.ex4 p');
+ex4.innerText = students[0].name + ' a obtenu ' + students[0].score
+ex4.innerText += '\nRéussite :'
+students.forEach(function(item){
+    if(item.score>10){
+        ex4.innerText += '\n' + item.name
+    }
+})
+
+// EXO 5
+const ex5 = document.querySelector('.ex5 p');
+let moyenne = 0;
+students.forEach(function(item){
+    moyenne += item.score/students.length
+})
+
+ex5.innerText = moyenne;

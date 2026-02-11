@@ -1,0 +1,14 @@
+{
+   "name": "Haute Ecole Albert Jacquard",
+   "address": {
+       "street": "Avenue Comte de Smet de Nayer",
+       "zip": "5000",
+       "city": "Namur"
+   },
+   "sections": [
+       "3D",
+       "Communication Graphique",
+       "Jeux Vidéo",
+       "Web"
+   ]
+}

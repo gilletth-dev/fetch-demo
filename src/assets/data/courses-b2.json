@@ -1,0 +1,32 @@
+[
+    {
+        "code": "TCOG0001-1",
+        "nom": "Techniques d'expression et de communication",
+        "quadri": "Q1",
+        "credits": 7
+    },
+    {
+        "code": "TPIG0001-1",
+        "nom": "Travaux pratiques de techniques infographiques",
+        "quadri": "Q1",
+        "credits": 12
+    },
+    {
+        "code": "DWTR0001-1",
+        "nom": "Design Web",
+        "quadri": "Q2",
+        "credits": 18
+    },
+    {
+        "code": "PRUX0001-1",
+        "nom": "Projet Rethinking UX",
+        "quadri": "Q2",
+        "credits": 5
+    },
+    {
+        "code": "PRCO0001-1",
+        "nom": "Projet Dataplay",
+        "quadri": "Q2",
+        "credits": 7
+    }
+]
